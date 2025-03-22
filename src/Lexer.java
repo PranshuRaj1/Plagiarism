@@ -289,23 +289,23 @@ public class Lexer {
     }
 
     // Example usage.
-//    public static void main(String[] args) {
-//        String source = "#include <iostream>\n" +
-//                "// This is a single-line comment.\n" +
-//                "int main() {\n" +
-//                "    int number = 42;\n" +
-//                "    float value = 3.14;\n" +
-//                "    std::string text = \"Hello, world!\";\n" +
-//                "    /* This is a \n" +
-//                "       multi-line comment */\n" +
-//                "    return 0;\n" +
-//                "}\n";
-//
-//        Lexer lexer = new Lexer(source);
-//        List<Token> tokens = lexer.tokenize();
-//        for (Token token : tokens) {
-//            System.out.println(token);
-//        }
-//    }
+    public static void main(String[] args) {
+        String source = "#include <iostream>\n" +
+                "// This is a single-line comment.\n" +
+                "int main() {\n" +
+                "    int number = 42;\n" +
+                "    float value = 3.14;\n" +
+                "    std::string text = \"Hello, world!\";\n" +
+                "    /* This is a \n" +
+                "       multi-line comment */\n" +
+                "    return 0;\n" +
+                "}\n";
+
+        Lexer lexer = new Lexer(source);
+        List<Token> tokens = lexer.tokenize();
+        for (Token token : tokens) {
+            System.out.println(token);
+        }
+    }
 
 }
