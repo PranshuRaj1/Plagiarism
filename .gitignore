@@ -1,3 +1,6 @@
 .idea/
 out/
 Plagrism.iml
+src/Lexer.java
+src/Token.java
+src/TokenType.java
