@@ -6,9 +6,6 @@
 
 Below are some of the key resources and research materials I've used for developing this project:
 
-- **[Perplexity AI Search: Building a Code Plagiarism Detector](https://www.perplexity.ai/search/i-am-going-to-build-a-code-pla-ByTfUivhSkimFbfjFmWQqw?11=d)**  
-  *A research query exploring ideas and methods for building a code plagiarism detection system.*
-
 - **[Dodona Edu - Dolos](https://github.com/dodona-edu/dolos)**  
   *A GitHub repository focused on plagiarism detection and related research projects.*
 
