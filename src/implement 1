@@ -1,3 +1,6 @@
+Problem Analysis
+this was main.java
+-------------------------------------------------------------------------------------------
 import PlagiarismDetector.PlagiarismReport;
 import PlagiarismDetector.WinnowingConfig;
 import PlagiarismDetector.WinnowingDetector;
@@ -88,13 +91,11 @@ public class Main {
 
         // Configure detector with recommended parameters for code comparison
         WinnowingConfig config = new WinnowingConfig.Builder()
-                .setKGramSize(7)         // increased from 5 for better pattern matching
-                .setWindowSize(4)        // reduced from 6 for higher sensitivity
-                .setHashAlgorithm("murmur3")  // using Murmur3 for better distribution
+                .setKGramSize(5)
+                .setWindowSize(6)
                 .setNormalizeIdentifiers(true)
                 .setIgnoreComments(true)
                 .build();
-
         //System.out.println(" -> " + config);
 
         WinnowingDetector detector = new WinnowingDetector(config);
@@ -107,6 +108,14 @@ public class Main {
         PlagiarismReport report = detector.analyzeCode(source1, source2);
         System.out.println(report);
     }
-
-
 }
+-------------------------------------------------------------------------------------------
+The test case shows 29% similarity despite being 100% plagiarized due to:
+
+Variable Renaming: wexondrivas vs queries
+
+Loop Restructuring: Different loop variable names and structures
+
+Mathematical Equivalence: Same logic with different implementations
+
+Comment Differences: Added explanatory comments in source2

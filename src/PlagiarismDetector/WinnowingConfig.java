@@ -6,6 +6,8 @@ public class WinnowingConfig {
     private final int hashBase;
     private final boolean normalizeIdentifiers;
     private final boolean ignoreComments;
+    private final String hashAlgorithm;
+
 
     public WinnowingConfig(Builder builder) {
         this.kGramSize = builder.kGramSize;
@@ -13,6 +15,7 @@ public class WinnowingConfig {
         this.hashBase = builder.hashBase;
         this.normalizeIdentifiers = builder.normalizeIdentifiers;
         this.ignoreComments = builder.ignoreComments;
+        this.hashAlgorithm = builder.hashAlgorithm;
     }
 
     public int getKGramSize() {
@@ -35,6 +38,10 @@ public class WinnowingConfig {
         return ignoreComments;
     }
 
+    public String getHashAlgorithm() {
+        return hashAlgorithm;
+    }
+
     /**
      * Builder class for WinnowingConfig.
      */
@@ -46,6 +53,7 @@ public class WinnowingConfig {
         private int hashBase = 101;
         private boolean normalizeIdentifiers = true;
         private boolean ignoreComments = true;
+        private String hashAlgorithm = "default";
 
         public Builder setKGramSize(int kGramSize) {
             this.kGramSize = kGramSize;
@@ -74,6 +82,11 @@ public class WinnowingConfig {
 
         public WinnowingConfig build() {
             return new WinnowingConfig(this);
+        }
+
+        public Builder setHashAlgorithm(String hashAlgorithm) {
+            this.hashAlgorithm = hashAlgorithm;
+            return this;
         }
     }
 }

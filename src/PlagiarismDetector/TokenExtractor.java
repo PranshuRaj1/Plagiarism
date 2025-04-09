@@ -28,6 +28,8 @@ public class TokenExtractor {
     private List<String> normalizeTokens(List<Token> tokens) {
         List<String> normalizedTokens = new ArrayList<>();
         for (Token token : tokens) {
+
+            // all the preprocessor
             if (config.shouldIgnoreComments() &&
                     (token.type == TokenType.COMMENT ||
                             token.type == TokenType.PREPROCESSOR ||
